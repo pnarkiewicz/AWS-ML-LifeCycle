@@ -90,8 +90,11 @@ def vectorize_dataseries(df):
 
 class Emotions(Dataset):
     """Class implementing and inheriting from torch.utils.data.Dataset
-
     Emotions implements mainly emotions dataset consiting of string as an input
+
+    :param inputs: list/torch.tensor/numpy.array with a sequence of vectors
+    :param labels: list/torch.tensor/numpy.array of integers - target for the corresponding input in the form of Integer
+    :param num_classes: number of different classes in total
     """
 
     def __init__(self, inputs, labels, num_classes):
